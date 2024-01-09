@@ -7,7 +7,7 @@ const Nav = () => {
             Brand
         </div>
         <nav>
-            <ul>
+            <ul className="flex">
                 <li>
                     <a className='text-white' href="#">Home</a>
                 </li>
