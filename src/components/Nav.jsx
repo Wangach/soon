@@ -2,17 +2,17 @@ import React from 'react'
 
 const Nav = () => {
   return (
-    <header className="bg-slate-500">
-        <div className="font-bold">
+    <header className="bg-slate-900 flex p-5 justify-between">
+        <div className="font-bold text-gray-300">
             Brand
         </div>
-        <nav>
-            <ul className="flex">
+        <nav className='w-3/12'>
+            <ul className="flex justify-between">
                 <li>
-                    <a className='text-white' href="#">Home</a>
+                    <a className='text-gray-300' href="#">Home</a>
                 </li>
                 <li>
-                    <a className='text-white' href="#">Github Profile</a>
+                    <a className='text-gray-300' href="#">Github Profile</a>
                 </li>
             </ul>
         </nav>
