@@ -1,6 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/*Google Fonts*/
+@font-face {
+    font-family: 'Genos';
+    src: url('../src/assets/fonts/Genos-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Lemon';
+    src: url('../src/assets/fonts/Lemon-Regular.ttf');
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('../src/assets/fonts/Oswald-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Salsa';
+    src: url('../src/assets/fonts/Salsa-Regular.ttf');
+}
 
 html {
     background-image: 
@@ -11,4 +28,16 @@ html {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+.oswald {
+    font-family: 'Oswald', sans-serif;
+}
+.lemon {
+    font-family: 'Lemon', sans-serif;
+}
+.genos {
+    font-family: 'Genos', sans-serif;
+}
+.salsa {
+    font-family: 'Salsa', sans-serif;
 }

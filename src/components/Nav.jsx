@@ -2,10 +2,7 @@ import React from 'react'
 
 const Nav = () => {
   return (
-    <header className="bg-slate-900 flex p-5 justify-between">
-        <div className="font-bold text-gray-300">
-            Brand
-        </div>
+    <header className="bg-slate-900 flex p-5 justify-center">
         <nav className='w-3/12'>
             <ul className="flex justify-between">
                 <li>
