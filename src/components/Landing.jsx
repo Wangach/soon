@@ -7,7 +7,7 @@ const Landing = () => {
   return (
     <>
     <Nav />
-    <div className='text-gray-300 mt-20 text-center'>
+    <div className='text-gray-300 text-center'>
       <h2 className='font-bold oswald'>
         This Website is under construction.
       </h2>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Form = () => {
   return (
-    <div className='absolute w-full translate-y-2/4'>
+    <div className='absolute w-full translate-y-1/4'>
       <div className="text-gray-300 mt-0 mx-auto mb-0 bg-selection p-4 w-6/12 rounded-md">
         <h2 className="text-center font-bold uppercase salsa">Contact Form</h2>
         <p className='text-center salsa'>Fill in all the fields</p>
