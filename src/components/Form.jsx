@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
@@ -10,28 +11,24 @@ const Form = () => {
 
   let handleForm = (e) => {
     e.preventDefault();
-    let url = `./backend/api.php`;
+    let url = `http://localhost:80/api/api.php`;
     let data = {
-      clientName: name,
-      clientEmail: email,
-      clientMessage: message
-    }
-    let options = {
-      method: 'POST',
-      headers: {
-        "Content-Type": "application/json",
-      },
-      data: JSON.stringify(data)
-    }
-
-    fetch(url, options)
-    .then(res => res.text())
-    .then((data) => {
-      console.log(data);
+        clientName: name,
+        clientEmail: email,
+        clientMessage: message
+      }
+    axios.post(url, data)
+    .then((response) => {
+      if(response.data.includes('successfully')){
+        alert('Message Has Been Sent Successfully!');
+        setName("");
+        setEmail("");
+        setMessage("");
+      }else{
+        alert('There Has Been An Error!');
+      }
     })
-    // console.log(
-    //   `Your Name is ${name}, your email address is ${email} and you ave sent me a message saying ${message}`
-    // );
+    .catch((err) => err)
   };
 
   return (
@@ -55,6 +52,7 @@ const Form = () => {
             className="w-full block rounded-md p-1"
             placeholder="John Doe"
             value={name}
+            required
           />
         </div>
         <div className="form-group">
@@ -67,6 +65,7 @@ const Form = () => {
             className="w-full block rounded-md p-1"
             placeholder="someone@example.com"
             value={email}
+            required
           />
         </div>
         <div className="form-group">
@@ -79,11 +78,12 @@ const Form = () => {
             className="w-full block rounded-md p-2"
             placeholder="Say Something..."
             value={message}
+            
           />
         </div>
         <button
           type="submit"
-          className="bg-slate-900 text-white font-semibold p-1 rounded-sm mt-2 w-1/4 cursor-pointer"
+          className="bg-slate-900 text-sky-500 font-semibold p-1 rounded-sm mt-2 w-1/4 cursor-pointer"
         >
           <FontAwesomeIcon icon={faPaperPlane} />
         </button>

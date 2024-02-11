@@ -1,4 +1,8 @@
 import React from 'react'
+import { useEffect } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import Nav from './Nav'
 import Form from './Form'
 import Footer from './Footer'
@@ -12,8 +16,8 @@ const Landing = () => {
         This Website is under construction.
       </h2>
       <p className='salsa'>
-        Don't shy off checking out my <a target='_blank' href="#">Github profile</a>.
-        I have got some cool stuff there.
+        Check out my <a target='_blank' href="#"><FontAwesomeIcon className='text-2xl text-sky-500' icon={faGithub} /></a> or
+        Shoot me a <FontAwesomeIcon className='text-2xl text-sky-500' icon={faEnvelope} />  below.
       </p>
     </div>
     <Form />
