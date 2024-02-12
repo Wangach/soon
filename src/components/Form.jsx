@@ -25,8 +25,10 @@ const Form = () => {
         setName("");
         setEmail("");
         setMessage("");
+        setBtnVal(<FontAwesomeIcon icon={faPaperPlane} />);
       }else{
         alert('There Has Been An Error!');
+        setBtnVal(<FontAwesomeIcon icon={faPaperPlane} />);
       }
     })
     .catch((err) => err)
