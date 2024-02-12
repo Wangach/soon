@@ -8,6 +8,7 @@ const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [btnValue, setBtnVal] = useState(<FontAwesomeIcon icon={faPaperPlane} />);
 
   let handleForm = (e) => {
     e.preventDefault();
@@ -82,10 +83,11 @@ const Form = () => {
           />
         </div>
         <button
+        onClick={() => setBtnVal("Submitting...")}
           type="submit"
           className="bg-slate-900 text-sky-500 font-semibold p-1 rounded-sm mt-2 w-1/4 cursor-pointer"
         >
-          <FontAwesomeIcon icon={faPaperPlane} />
+          {btnValue}
         </button>
       </form>
     </div>
