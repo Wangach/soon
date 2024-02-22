@@ -11,6 +11,7 @@ const Form = () => {
   const [btnValue, setBtnVal] = useState(<FontAwesomeIcon icon={faPaperPlane} />);
 
   let handleForm = (e) => {
+    setBtnVal("Submitting...")
     e.preventDefault();
     let url = `http://localhost:80/api/api.php`;
     let data = {
@@ -85,7 +86,6 @@ const Form = () => {
           />
         </div>
         <button
-        onClick={() => setBtnVal("Submitting...")}
           type="submit"
           className="bg-slate-900 text-sky-500 font-semibold p-1 rounded-sm mt-2 w-1/4 cursor-pointer"
         >
